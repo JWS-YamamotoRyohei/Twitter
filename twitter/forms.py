@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class TweetForm(forms.ModelForm):
     class Meta:
         model = Tweet
-        fields = ('tweet_text', 'author',)
+        fields = ('tweet_text', 'author')
 
 class SignUpForm(forms.Form):
     username = forms.CharField(widget=forms.TextInput)
