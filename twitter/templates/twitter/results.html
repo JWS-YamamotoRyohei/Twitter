@@ -1,0 +1,6 @@
+<h1>{{ tweet.tweet_text }}</h1>
+<p>
+    {{ tweet.nicevotes }}
+    <a href="{% url 'twitter:detail' tweet.id %}">Vote again</a> or
+    <a href="{% url 'twitter:index' %}">go back to top page</a>?
+</p>

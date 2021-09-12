@@ -1,0 +1,10 @@
+<h1>Tweet Detail</h1>
+<p>
+    {{ tweet.tweet_text }}
+    <br>
+    ♡:{{ tweet.nicevotes }}
+    </br>
+    <br>
+    <a href= "{% url 'twitter:tweetlist' %}">Tweet List</a>
+    </br>
+</p>
