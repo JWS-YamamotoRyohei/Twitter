@@ -23,8 +23,15 @@ def tweetlist(request):
 def detail(request, tweet_id):
     user = request.user
     tweet = get_object_or_404(Tweet, pk=tweet_id)
+    if request.method == 'POST':
+            tweet.nicevotes += 1
+            tweet.save()
+            context = {'user':user,'tweet': tweet}
+            return render(request, 'twitter/detail.html', context)
+
     context = {'user':user,'tweet': tweet}
     return render(request, 'twitter/detail.html', context)
+
 
 def results(request, tweet_id):
     tweet = get_object_or_404(Tweet, pk=tweet_id)
