@@ -12,6 +12,9 @@
         </div>
     </br>
     <br>
+        <a href= "{% url 'twitter:profile' tweet.author %}">{{tweet.author}}</a>
+    </br>
+    <br>
         <a href= "{% url 'twitter:tweetlist' %}">Tweet List</a>
     </br>
 </p>
